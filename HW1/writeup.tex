@@ -18,10 +18,22 @@
 \section*{Command Logs}
 \begin{center}
 	\begin{tabular}{ c c }
-		1 & 2 \\
-		4 & 5 \\
-		7 & 8 
-	\end{tabular}
+		cd/scratch/spring2018 & Navigates us into the scrach folder. \\
+		mkdir group37 & Create a folder for our group. \\
+		cp ../bin/acl\_open./..bin/acl\_open group37 onid(s) & Gives access to other people in thr group \\
+		cp files to our folder & copying files to our group folder.\\
+		qemu-system-i386 -gdb tcp::5537 -S -nographic -kernel bzImage-qemux86.bin -drive file=core-image-lsb-sdk-qemux86.ext4,if=virtio -enable-kvm -net none -usb -localtime --no-reboot --append "root=/dev/vda rw console=ttyS0 debug" & Launches qemu.\\
+		Open a new terminal to run debug commands. & \\
+		copy kernel files. & \\
+		gdb -tui & Launch the debug mode to a target remote. \\
+		target remote: 5537 & Sets the target our port. \\
+		continue & continues gdb. \\
+		root & gains access to root. \\
+		Open another terminal and navigate to the group folder. & \\
+		Copy conifg files as /.config into our group37 folder. & \\
+		make -j4 all & Builds the kernel inside the vm. \\
+		
+	\end{tabular} 
 \end{center}
 
 \section*{Questions}

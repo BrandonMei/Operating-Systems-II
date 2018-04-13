@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2016.3.18)  13 APR 2018 13:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2016.3.18)  13 APR 2018 13:33
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -356,14 +356,19 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 20.
+
+Overfull \hbox (647.10172pt too wide) in paragraph at lines 20--37
+ [] 
+ []
+
 [1] (./writeup.aux) ) 
 Here is how much of TeX's memory you used:
- 1233 strings out of 495064
- 20763 string characters out of 3182224
- 69496 words of memory out of 3000000
- 4484 multiletter control sequences out of 15000+200000
+ 1234 strings out of 495064
+ 20781 string characters out of 3182224
+ 70496 words of memory out of 3000000
+ 4485 multiletter control sequences out of 15000+200000
  25356 words of font info for 55 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 26i,6n,21p,229b,147s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 26i,7n,21p,260b,147s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on writeup.dvi (1 page, 1184 bytes).
+Output written on writeup.dvi (1 page, 2356 bytes).
