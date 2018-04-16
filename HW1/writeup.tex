@@ -1,5 +1,6 @@
-\documentclass[onecolumn, 10pt, titlepage]{IEEEtran}
+\documentclass[onecolumn, draftclsnofoot, 10pt, titlepage, compsoc]{IEEEtran}
 \usepackage[utf8]{inputenc}
+\usepackage{url}
 
 \title
 {%
@@ -16,21 +17,39 @@
 \maketitle
 
 \section*{Command Logs}
-	\begin{tabular}{ l l }
+\begin{tabular}{ | p{5cm} | p{5cm} | }
+		\hline
+		\textbf{Commands} & \textbf{Explination} \\
+		\hline
+		\hline
 		cd/scratch/spring2018 & Navigates us into the scrach folder. \\
+		\hline
 		mkdir group37 & Create a folder for our group. \\
+		\hline
 		cp ../bin/acl\_open./..bin/acl\_open group37 onid(s) & Gives access to other people in thr group \\
+		\hline
 		cp files to our folder & copying files to our group folder.\\
+		\hline
 		qemu-system-i386 -gdb tcp::5537 -S -nographic -kernel bzImage-qemux86.bin -drive file=core-image-lsb-sdk-qemux86.ext4,if=virtio -enable-kvm -net none -usb -localtime --no-reboot --append "root=/dev/vda rw console=ttyS0 debug" & Launches qemu.\\
+		\hline
 		Open a new terminal to run debug commands. & \\
+		\hline
 		copy kernel files. & \\
+		\hline
 		gdb -tui & Launch the debug mode to a target remote. \\
+		\hline
 		target remote: 5537 & Sets the target our port. \\
+		\hline
 		continue & continues gdb. \\
+		\hline
 		root & gains access to root. \\
+		\hline
 		Open another terminal and navigate to the group folder. & \\
+		\hline
 		Copy conifg files as /.config into our group37 folder. & \\
-		make -j4 all & Builds the kernel inside the vm.
+		\hline
+		make -j4 all & Builds the kernel inside the vm. \\
+		\hline
 		
 	\end{tabular} 
 
@@ -50,5 +69,9 @@ this is atest paragraphefaeaefeuihquifahuaef
 	\end{tabular}
 \end{center}
 
+\nocite{*}
+\citation{mybib}
+\bibliographystyle{IEEEtran}
+\bibliography{mybib}
 
 \end{document}
