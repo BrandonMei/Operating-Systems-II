@@ -1,6 +1,6 @@
 This is BibTeX, Version 0.99d (TeX Live 2013)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: writeup.aux
+The top-level auxiliary file: CS444_project1_37.aux
 The style file: IEEEtran.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -15,7 +15,7 @@ Database file #1: mybib.bib
 Done.
 You've used 1 entry,
             4087 wiz_defined-function locations,
-            828 strings with 7482 characters,
+            828 strings with 7502 characters,
 and the built_in function-call counts, 510 in all, are:
 = -- 35
 > -- 4

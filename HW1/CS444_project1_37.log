@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2016.3.16)  15 APR 2018 20:06
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2016.3.16)  15 APR 2018 20:16
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
-**writeup.tex
-(./writeup.tex
+**CS444_project1_37.tex
+(./CS444_project1_37.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, lo
 aded.
@@ -342,8 +342,8 @@ Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 LaTeX Warning: Unused global option(s):
     [titlepage].
 
-(./writeup.aux)
-\openout1 = `writeup.aux'.
+(./CS444_project1_37.aux)
+\openout1 = `CS444_project1_37.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
@@ -449,7 +449,7 @@ Underfull \hbox (badness 1509) in paragraph at lines 103--103
 []\OT1/ppl/m/n/9.53561 Brandon Mei fin-ished the an-
  []
 
-(./writeup.bbl [3]
+(./CS444_project1_37.bbl [3]
 LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 26.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8.03> on input line 26.
@@ -463,14 +463,14 @@ Underfull \hbox (badness 1769) in paragraph at lines 25--28
 -tion,'' $https : / / manpages . debian . org / jessie / qemu-[]system-[]x86 /
  []
 
-) [4] (./writeup.aux) ) 
+) [4] (./CS444_project1_37.aux) ) 
 Here is how much of TeX's memory you used:
  1449 strings out of 495064
- 24138 string characters out of 3182224
+ 24248 string characters out of 3182224
  76203 words of memory out of 3000000
  4676 multiletter control sequences out of 15000+200000
  29941 words of font info for 76 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 26i,9n,21p,357b,352s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 26i,9n,21p,367b,352s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on writeup.dvi (4 pages, 8636 bytes).
+Output written on CS444_project1_37.dvi (4 pages, 8636 bytes).
