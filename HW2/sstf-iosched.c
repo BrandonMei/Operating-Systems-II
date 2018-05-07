@@ -35,8 +35,37 @@ static int sstf_dispatch(struct request_queue *q, int force)
 static void sstf_add_request(struct request_queue *q, struct request *rq)
 {
 	struct sstf_data *sd = q->elevator->elevator_data;
-
-	list_add_tail(&rq->queuelist, &nd->queue);
+	struct request *data;
+	if(list_empty(sd -> queue))
+	{
+		list_add_tail(&rq -> queuelist, &nd -> queue);
+	}
+	else if((list_entry(sd -> queue.next) -> sector > rq -> sector) && rq -> sector > list_entry(sd -> queue.prev) -> sector)
+	{
+		if(rq -> sector > q -> end_sector)
+		{
+			list_add(&rq -> queuelist, &nd -> queue);
+		}
+		else
+		{
+			list_add_tail(&rq -> queuelist, &nd -> queue);
+		}
+	}
+	else
+	{
+		list_for_each_entry(data, q -> elevator -> elevator_data.queue, queuelist)
+		{
+			temp = list_entry(data -> queuelist.next, struct request, queuelist);
+			if(temp -> sector > rq -> sector)
+			{
+				list_add(&rq -> queuelist, &temp -> queuelist);
+			}
+			else
+			{
+				return;
+			}
+		}
+	}
 }
 
 static struct request *
