@@ -161,11 +161,13 @@
 +
 +  static void sstf_add_request(struct request_queue *q, struct request *rq)
 +  {
++    printk("MAKING AN ADD REQUEST\n");
 +    struct sstf_data *sd = q->elevator->elevator_data;
 +    struct request *data;
 +    if(list_empty(&sd -> queue))
 +    {
 +      list_add_tail(&rq -> queuelist, &nd -> queue);
++      printk("Empty List, Adding to tail.\n");
 +    }
 +    else if((list_entry(sd -> queue.next) -> sector > rq -> sector) && rq -> sector > list_entry(sd -> queue.prev) -> sector)
 +    {
