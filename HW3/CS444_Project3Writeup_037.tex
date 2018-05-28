@@ -20,32 +20,56 @@
 \newpage
 
 \section{Implement Design}
-
+To begin the problem we gone through the trial and error by starting the basic block driver and slowly implement the encryption system through looking online resources. The crypto handles the IO requests. The final result was to include a diver mounted device with utilize the implemented block driver and looking in the encryption block device where device module need to made in order to make a device driver with the linux Crypto API. This will ensure a valid encryption files.\\
 
 \section{Control Log}
 
 \begin{tabular}{l p{5cm} l p{5cm} l}
 \textbf{Detail} & \textbf{Author} & \textbf{Description}\\
-\hline
-\hline
-\hline
-\hline
+\href{https://github.com/BrandonMei/Operating-Systems-II/commit/455b948f6fa4bd664c303a0e7ca383fb4e0bc508}{455b948} & Brandon Mei & Adding the crypto in init() and transfer() function\\\hline
+\href{https://github.com/BrandonMei/Operating-Systems-II/commit/fb027eca580c363ed2c2800114e7b14c9805f1e1}{fb027ec} & Brian Huang & added document and implement the sbd\\\hline
+\href{https://github.com/BrandonMei/Operating-Systems-II/commit/f50dec643a641515fb1834436ac0b255e7116ebe}{f50dec6} & Brian Huang & implement the searcher\\\hline
+\href{https://github.com/BrandonMei/Operating-Systems-II/commit/31b31b0543424d9f951b3f2afda631f730b13e21}{31b31b} & Brandon Mei & implement the patch files and update the inserter\\\hline
+\href{https://github.com/BrandonMei/Operating-Systems-II/commit/d1500e9a2595682c1de2afaffdce6e25423dbe74}{d1500e} & Brandon Mei & Update the writeup and finalize.\\\hline
+
 \end{tabular}
 
 \section{Work Log}
+The work log began with doing some research on what is the assignment was asking. We focus using LDD3 and searching around the web for additional information. After understanding what is exactly what was needed to be done, We got a basic block driver (Sbull.c) started to go through many trial and error by setting up the whole system. Then from building the module, we move the module to the VM through the SCP and installing the module with insmod. After that we mount with the fdisk and making a filesystem with the mkfs.ext2, and mounting it using mount. This is the list of commands that can be found below of the steps taken to get there.\\
 
+\begin{itemize}
+\item Getting 3 files from patch
+\item make -j4 all (Should make the .ko file)
+\item Qemu - Remove of -net:none
+\item scp to get the module (.ko file) into the VM
+\item insmod sdb.ko
+\item fdisk /dev/sbd0p1 and make a partition
+\item mkfs.ext2 to make the file system (mkfs.ext2 /dev/sbd0p1)
+\item mount /dev/sbd0p1 /test
+\end{itemize}
+
+Finally, we got everything is working. We can start with actually implementing the Crypto into the device.  After, going through trial and error, the Crypto is implemented and files can be placed into the filesystem.\\
 
 \section{Questions}
 
 \subsection{What do you think the main point of this assignment is?}
 
+The main point of this assignment was to understand and develop the linux block devices, Crypto API, and modules. We thought the purpose of this assignment was to create an understanding of how to bring the modules onto the Virtual Machine in order to get establish a general foundation of importing Linux modules.\\
+
 \subsection{How did you personally approach the problem Design decisions, algorithm, etc.}
+
+The way we approach his assignment is going through the problem by trial and error starting with the basic block diver with no encryption in it. After that, we implemented the encryption system through various online resource and putting it together in sections. When there was an error, we revert to previous commits. Then most of the crypto can be found in the transfer function that handles the I/O request. It is the algorithm that checks the block by block to see if it should encrypt, read or write, and decrypt. While going through the check, it either performs the encryption or decryption with the crypto\_chiper\_encrypt\_one() or crypto\_chiper\_decryp\_one(). Also there was some crypto instantiation in the init() function.\\
 
 \subsection{How did you ensure your solution was correct Testing details, for instance?}
 
+We decided to write a script that basically does all of the require steps to the solution and set up everything including unpatching, make the .ko file, begain the VM, install the module, using SCP to bring the module, partition the drive, make file systen, and mount it with the device.\\
+
 \subsection{What did you learn?}
 
+We learn from this assignment was on Linux devices, encrypting the blocks, and write the block drivers. Also we learned how to SCP the files into the VM. We learn the partition the dive and make the file system and mount the drives. Then learn the linux crypto API.\\
+
 \subsection{How should the TA evaluate your work? Provide detailed steps to prove correctness.}
+As the steps we took above going through learning from trial and error. The commands we used is by getting 3 files from the patch and -j4 all to make the .ko files. After that the SCP to get module of .ko file into the VM. Then insmod sbd.ko. fdisk /dev/sbd0p1 and make the partition. Mkfs.ext2 is to make the file system and finally mount /dev.sbd0p1 /test. We also added some print statements to figure what is doing so we know it was done correctly.\\
 
 \nocite{*}
 \citation{mybib}
